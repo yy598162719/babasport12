@@ -15,6 +15,7 @@
           <url>http://localhost:8080/manager/text</url>
           <path>/</path>
           <server>tomcat</server>
+          <uriEncoding>UTF-8</uriEncoding>
           <username>tomcat</username>
           <password>123456</password>
         </configuration>
