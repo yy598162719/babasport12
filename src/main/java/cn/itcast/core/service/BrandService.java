@@ -10,4 +10,14 @@ import cn.itcast.core.bean.product.Brand;
  */
 public interface BrandService {
     Pagination getBrandListWithPage(Brand brand);
+
+    Integer addBrand(Brand brand);
+
+    void deleteBrandByKey(Integer id);
+
+    void deleteBrandByKeys(Integer[] ids);
+
+    void updateBrandByKey(Brand brand);
+
+    Brand getBrandByKey(Integer id);
 }

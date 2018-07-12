@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * 事务层,逻辑开发层 实现类
@@ -31,5 +30,41 @@ public class BrandServiceImpl implements BrandService {
         pagination.setList(brandDao.getBrandListWithPage(brand));
 
         return pagination;
+    }
+
+    /**
+     * 保存品牌
+     *
+     * @param brand
+     */
+    @Override
+    public Integer addBrand(Brand brand) {
+        // 保存数据
+        return brandDao.addBrand(brand);
+    }
+
+    /**
+     * 删除品牌
+     *
+     * @param id
+     */
+    @Override
+    public void deleteBrandByKey(Integer id) {
+        brandDao.deleteBrandByKey(id);
+    }
+
+    @Override
+    public void deleteBrandByKeys(Integer[] ids) {
+        brandDao.deleteBrandByKeys(ids);
+    }
+
+    @Override
+    public void updateBrandByKey(Brand brand) {
+        brandDao.updateBrandByKey(brand);
+    }
+
+    @Override
+    public Brand getBrandByKey(Integer id) {
+        return brandDao.getBrandByKey(id);
     }
 }

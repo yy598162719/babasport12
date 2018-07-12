@@ -3,7 +3,8 @@
   <groupId>cn.itcast</groupId>
   <artifactId>babasport</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
+
+    <packaging>war</packaging>
   <name>babasport</name>
   <build>
     <plugins>

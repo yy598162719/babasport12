@@ -1,11 +1,13 @@
 package cn.itcast.core.bean.product;
 
-import lombok.Data;
 
 import java.io.Serializable;
 
+import static common.Constants.IMAGE_URL;
+
 /**
  * 品牌对象
+ *
  * @author lixu
  * @Date [2014-3-28 下午04:38:53]
  */
@@ -24,11 +26,21 @@ public class Brand implements Serializable {
     private Integer isDisplay;
 
     //页号
-    private Integer pageNo=1;
+    private Integer pageNo = 1;
     //开始行
     private Integer startRow;
     //每页数
-    private Integer pageSize=10;
+    private Integer pageSize = 10;
+    // 全路径
+    private String allUrl;
+
+    public void setAllUrl(String allUrl) {
+        this.allUrl = allUrl;
+    }
+
+    public String getAllUrl() {
+        return IMAGE_URL + imgUrl;
+    }
 
     @Override
     public String toString() {
@@ -103,7 +115,7 @@ public class Brand implements Serializable {
 
     public void setPageNo(Integer pageNo) {
         //计算一次开始行
-        this.startRow=(pageNo-1)*pageSize;
+        this.startRow = (pageNo - 1) * pageSize;
         this.pageNo = pageNo;
     }
 
@@ -121,7 +133,7 @@ public class Brand implements Serializable {
 
     public void setPageSize(Integer pageSize) {
         //计算一次开始行
-        this.startRow=(pageNo-1)*pageSize;
+        this.startRow = (pageNo - 1) * pageSize;
         this.pageSize = pageSize;
     }
 }

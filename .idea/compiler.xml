@@ -9,5 +9,8 @@
         <module name="babasport12" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="jersy" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
